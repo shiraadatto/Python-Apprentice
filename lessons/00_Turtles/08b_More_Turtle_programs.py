@@ -24,6 +24,12 @@ def set_turtle_image(turtle, image_name):
     screen.addshape(image_path)
     turtle.shape(image_path)
 
-set_turtle_image(tina, "leaguebot_bolt.gif")
+set_turtle_image(tina, "girl_red.gif")
+
+for i in range(4):
+    tina.penup()
+    tina.forward(100)
+    tina.left(90)
+
 
 turtle.exitonclick()
