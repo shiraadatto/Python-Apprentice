@@ -9,7 +9,8 @@ to see how to use the turtle commands.
 """
 
 # These lines are needed in most turtle programs
-import turtle                           # Tell Python we want to work with the turtle
+import turtle  
+import random                         # Tell Python we want to work with the turtle
 turtle.setup (width=600, height=600)    # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
@@ -17,23 +18,39 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
-tina.pencolor('green')
-tina.forward(100)
-tina.left(120)
-tina.pencolor('red')
-tina.forward(100)
-tina.left(120)
-tina.pencolor('yellow')
-tina.forward(100)
-tina.penup()
-tina.left(120)
-tina.forward(30)
-tina.left(90)
-tina.forward(30)
-tina.pendown()
-tina.pencolor('blue')
-tina.write("triangle")
+turtle.bgcolor("black")
 
+def drawStar():
+    x = random.randint(-300, 300)
+    y = random.randint(0, 300)
+    tina.goto(x, y)
+    tina.pencolor("white")
+    tina.fillcolor("white")
+    tina.pendown()
+    tina.begin_fill()
+    tina.circle(2)
+    tina.end_fill()
+    tina.penup()
+
+for i in range(10):
+    drawStar()
+
+tina.goto(-300,-200)
+
+def drawBuilding():
+    tina.pencolor("red")
+    tina.pendown()
+    tina.forward(100)
+    tina.right(90)
+    tina.forward(50)
+    tina.right(90)
+    tina.forward(100)
+    tina.right(90)
+    tina.forward(50)
+    tina.penup()
+
+for i in range(1):
+    drawBuilding()
 
 ... # Your code here
 
