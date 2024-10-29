@@ -35,27 +35,42 @@ def drawStar():
 for i in range(30):
     drawStar()
 
-tina.goto(-300,153)
 
 colors = ["red", "blue", "green", "yellow", "purple", "orange"]
 
 def drawBuilding():
-    tina.pencolor(colors[random.randint(0,5)])
-    tina.fillcolor(colors[random.randint(0,5)])
+    tina.setheading(0)
+    tina.color(colors[random.randint(0,5)])
     tina.pendown()
     tina.begin_fill()
     tina.forward(100)
-    tina.right(90)
-    tina.forward(300)
-    tina.right(90)
-    tina.forward(300)
-    tina.right(90)
+    tina.left(90)
+    tina.forward(400)
+    tina.left(90)
     tina.forward(100)
+    tina.left(90)
+    tina.forward(400)
     tina.end_fill()
     tina.penup()
+    tina.setheading(0)
+    tina.forward(25)
+    tina.left(90)
+    tina.forward(200)
+    tina.pencolor("yellow")
+    tina.pendown()
+    tina.left(90)
+    tina.forward(30)
+    tina.left(90)
+    tina.forward(30)
+    tina.left(90)
+    tina.forward(30)
+    tina.penup()
+
+tina.goto(-300,-300)
 
 for i in range(1):
     drawBuilding()
+    tina.forward(105)
 
 ... # Your code here
 
