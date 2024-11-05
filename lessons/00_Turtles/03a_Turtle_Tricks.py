@@ -32,7 +32,7 @@ def drawStar():
     tina.end_fill()
     tina.penup()
 
-for i in range(30):
+for i in range(40):
     drawStar()
 
 
@@ -53,25 +53,46 @@ def drawBuilding():
     tina.end_fill()
     tina.penup()
     tina.setheading(0)
-    tina.forward(25)
-    tina.left(90)
-    tina.forward(200)
-    tina.pencolor("yellow")
-    tina.pendown()
-    tina.left(90)
-    tina.forward(30)
-    tina.left(90)
-    tina.forward(30)
-    tina.left(90)
-    tina.forward(30)
-    tina.penup()
 
 tina.goto(-300,-300)
 
-for i in range(1):
+for i in range(6):
     drawBuilding()
     tina.forward(105)
 
+
+def drawWindow(x,y):
+    tina.penup()
+    tina.goto(x,y)
+    tina.color("white")
+    tina.setheading(90)
+    tina.pendown()
+    tina.begin_fill()
+    tina.forward(30)
+    tina.right(90)
+    tina.forward(30)
+    tina.right(90)
+    tina.forward(30)
+    tina.right(90)
+    tina.forward(30)
+    tina.end_fill()
+  
+def drawWindows(x,y): 
+    drawWindow(x,y)
+    drawWindow(x+35,y)
+    drawWindow(x, y-55)
+    drawWindow(x+35, y-55)
+    drawWindow(x, y-110)
+    drawWindow(x+35, y-110)
+    drawWindow(x, y-165)
+    drawWindow(x+35, y-165)
+
+drawWindows(-285,30)
+drawWindows(-180, 30)
+drawWindows(-75, 30)
+drawWindows(30, 30)
+drawWindows(135, 30)
+drawWindows(240, 30)
 ... # Your code here
 
 turtle.exitonclick()                    # Close the window when we click on it
