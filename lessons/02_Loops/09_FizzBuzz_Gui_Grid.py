@@ -41,5 +41,19 @@ app = App("Numbers Grid", layout="grid")
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
 # Call Text(app, text='...', grid=[col, row], color=...) to display something. 
+for c in range(0,10):
+    for r in range(1,11): 
+        t = r+c*10
+        Text(app, text=str(t), grid=[r, c], color="blue")
+    
+if t % 5: 
+    print("🦡")
+elif t % 3: 
+    print("🍄")
+elif t % 15: 
+    print("🐍")
+else: 
+    print(str(t))
+
 
 app.display()
