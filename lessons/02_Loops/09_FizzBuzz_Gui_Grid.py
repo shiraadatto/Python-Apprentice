@@ -44,16 +44,14 @@ app = App("Numbers Grid", layout="grid")
 for c in range(0,10):
     for r in range(1,11): 
         t = r+c*10
-        Text(app, text=str(t), grid=[r, c], color="blue")
-    
-if t % 5: 
-    print("🦡")
-elif t % 3: 
-    print("🍄")
-elif t % 15: 
-    print("🐍")
-else: 
-    print(str(t))
+        if t % 15 == 0: 
+            Text(app, text="🐍", grid=[r,c], color="blue")
+        elif t % 5 == 0: 
+            Text(app, text="🦡", grid=[r,c], color="blue")
+        elif t % 3 == 0: 
+            Text(app, text="🍄", grid=[r,c], color="blue")
+        else: 
+            Text(app, text=str(t), grid=[r, c], color="blue")
 
 
 app.display()
