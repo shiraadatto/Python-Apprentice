@@ -42,10 +42,11 @@ def ask_integer(prompt):
 
 
 # Pick the random number
-
+n = random.randint(1, 100)
 # In your loop:
 
     # Get the user's guess
+guess = ask_integer("Guess a number between 1 and 100: ")
 
     # If the user's guess is divisible by 7, tell the user to start over
 
