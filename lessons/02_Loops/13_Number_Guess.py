@@ -44,11 +44,22 @@ def ask_integer(prompt):
 # Pick the random number
 n = random.randint(1, 100)
 # In your loop:
-
-    # Get the user's guess
 guess = ask_integer("Guess a number between 1 and 100: ")
 
+while guess != n: 
+    # Get the user's guess
     # If the user's guess is divisible by 7, tell the user to start over
+    if guess % 7 == 0: 
+        print("Start over")
+        guess = ask_integer("Guess a number between 1 and 100: ")
+    elif guess < n:
+        print("Too low")
+        guess = ask_integer("Guess a number between 1 and 100: ")
+    elif guess > n:
+        print("Too high")
+        guess = ask_integer("Guess a number between 1 and 100: ") 
+if guess == n: 
+    print("Correct!")
 
     # If the user's guess is too high, tell the user
     # If the user's guess is too low, tell the user
