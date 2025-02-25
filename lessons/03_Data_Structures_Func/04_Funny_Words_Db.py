@@ -39,11 +39,13 @@ def add_definition(db, key, value):
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
     """
 
+
     # Check the limit
-
+    if len(db) == 5: 
+        print("error")
+    else:
+        db[key]=value
     # Set the item in the database
-
-    pass
 
 
 def delete_definition(db, key):
@@ -59,8 +61,8 @@ def delete_definition(db, key):
     """
 
     # Delete the item from db if it is present
-
-    pass
+    if key in db: 
+        db.remove(key)
 
 
 def is_funny(definition):
@@ -77,7 +79,10 @@ def is_funny(definition):
     """
     
     # Return True if the definition contains any of the funny words, False otherwise
-
+    list = ['fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen']
+    for word in list:
+        if word in definition:
+            return True
     return False
 
 def update_listbox(db):
