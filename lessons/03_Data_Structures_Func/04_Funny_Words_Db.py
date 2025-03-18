@@ -95,17 +95,16 @@ def update_listbox(db):
 
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
-    l = [
-        "Item 1: Fake Definition 1",
-        "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
-    ]
+
+    l2 = []
+    for key, value in db.items():
+        l2.append(f"{key}: {value}")
 
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
 
-    return l
+    return l2
 
 ################################################################
 
